@@ -1,0 +1,15 @@
+import javax.swing.JOptionPane;
+
+public class Vida {
+	//Método por onde inicializa o programa
+	public static void main(String [] args) {
+		Pessoa novaPessoa = new Pessoa();
+		novaPessoa.setNome("Vitoria");
+		novaPessoa.setIdade(20);
+		//JOptionPane: caixa de diálogo visual
+		JOptionPane.showMessageDialog(null,"Meu nome é: "+novaPessoa.getNome());
+		JOptionPane.showMessageDialog(null,"Minha idade é: "+novaPessoa.getIdade());
+		novaPessoa.falar();
+		
+	}
+}

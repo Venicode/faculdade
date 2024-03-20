@@ -1,0 +1,9 @@
+public class Vida {
+	//Método construtor
+	public static void main(String [] args) {
+		Pessoa novaPessoa = new Pessoa();
+		novaPessoa.nome = "Vitoria";
+		novaPessoa.idade;
+		System.out.println();
+	}
+}

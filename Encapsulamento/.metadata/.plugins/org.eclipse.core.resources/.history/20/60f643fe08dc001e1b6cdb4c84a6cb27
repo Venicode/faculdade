@@ -1,0 +1,11 @@
+import ContaBancaria.ContaBancaria;
+
+public class Main2 {
+	public static void main (String args[]) {
+		ContaBancaria novaconta = new ContaBancaria();
+		novaconta.setSaldo(2000);
+		novaconta.depositar(1000);
+		novaconta.sacar(100);
+		System.out.println(novaconta.getSaldo());
+	}
+}

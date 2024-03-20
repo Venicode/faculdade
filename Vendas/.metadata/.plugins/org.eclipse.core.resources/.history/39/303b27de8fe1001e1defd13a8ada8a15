@@ -1,0 +1,8 @@
+package controller;
+
+import model.Cliente;
+
+public class Controller {
+	Cliente novoCliente = new Cliente();
+	novoCliente.
+}

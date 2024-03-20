@@ -1,0 +1,16 @@
+package view;
+
+public class SistemaDeVendas {
+	void Menu() {
+		System.out.println("Bem vindo(a) ao sistema de Vendas");
+		System.out.println("O que deseja fazer?");
+		
+		//OPÇÕES DO MENU
+		System.out.println("1- Realizar venda");
+		System.out.println("2- Cadastrar produto");
+		System.out.println("3- Cadastrar cliente");
+		System.out.println("4- Listar produtos");
+		System.out.println("5- Listar clientes");
+	}
+	
+}
