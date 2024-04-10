@@ -8,7 +8,6 @@ public abstract class Pessoa {
 	private double rendaMensal;
 	private double salario;
 	private boolean ativa;
-	
 	public Pessoa() {
 	
 	}
@@ -68,5 +67,6 @@ public abstract class Pessoa {
 	public void setAtiva(boolean ativa) {
 		this.ativa = ativa;
 	}
+	
 	
 }

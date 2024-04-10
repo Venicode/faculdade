@@ -1,0 +1,43 @@
+package controller;
+
+import java.util.Scanner;
+import model.Cliente;
+import model.Produto;
+import view.View;
+import controller.ProdutoController;
+
+public class Controller {
+	public static void main(String args[]) {
+
+		
+		ProdutoController acoesProdutos = new ProdutoController();
+		View novatela = new View();
+		novatela.BoasVindas();
+		novatela.Menu();
+		Scanner opcaoUsuario = new Scanner(System.in);
+		String resposta = opcaoUsuario.nextLine();
+		
+		//Verificando opcao
+		if(resposta == "2") {
+			System.out.println(resposta);
+			//Criando produtos
+			System.out.println("Informe o nome do produto");
+			Produto novoProduto = new Produto();
+			String nomeProduto = opcaoUsuario.nextLine();
+			novoProduto.setNomeProduto(nomeProduto);
+			System.out.println("Informe o valor do produto");
+			novoProduto.setValor(Double.parseDouble(resposta));
+			acoesProdutos.cadastrarProduto(novoProduto);
+			acoesProdutos.listarProduto();
+		}
+		if(resposta == "3") {
+			Cliente novoCliente = new Cliente();
+			System.out.println("Informe o nome do cliente");
+			novoCliente.setNome(resposta);
+		}
+		if(resposta == "4") {
+			acoesProdutos.listarProduto();
+		}
+		
+	}
+}

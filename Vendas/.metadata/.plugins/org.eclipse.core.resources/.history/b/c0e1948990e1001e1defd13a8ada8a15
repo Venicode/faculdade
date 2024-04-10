@@ -1,7 +1,0 @@
-package model;
-
-public class Cliente extends Pessoa {
-	public String realizarPagamento(double valor) {
-		return super.getNome() + " realizou um pagamento de "+ valor;
-	}
-}

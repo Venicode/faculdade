@@ -1,0 +1,21 @@
+package controller;
+
+import java.util.ArrayList;
+
+import model.Cliente;
+
+public class ClienteController {
+private ArrayList<Cliente> listaClientes = new ArrayList<>();
+	
+	public void cadastrarCliente(Cliente novoCliente) {
+		listaClientes.add(novoCliente);
+	}
+	
+	public void listarClientes() {
+		System.out.println("Lista de clientes");
+		for (Cliente cliente : listaClientes) {
+			System.out.println(cliente.getNome());
+		}
+		System.out.println('\n');
+	}
+}

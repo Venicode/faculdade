@@ -1,7 +1,8 @@
 package model;
 
 public class Cliente extends Pessoa {
-	public String realizarPagamento(String nomeProduto, double valor) {
-		return super.getNome() + " comprou o produto: "+ nomeProduto + " que custou: " + valor;
+	public String realizarPagamento(Produto produto) {
+		return super.getNome() + " comprou o produto: " + produto.getNomeProduto() + " na quantidade: "
+				+ produto.getQuantProduto() + " que custou: " + produto.getValor();
 	}
 }

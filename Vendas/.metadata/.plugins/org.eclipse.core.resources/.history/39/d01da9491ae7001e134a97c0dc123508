@@ -1,0 +1,21 @@
+package controller;
+
+import java.util.ArrayList;
+
+import model.Produto;
+
+public class ProdutoController {
+	private ArrayList<Produto> listaProdutos = new ArrayList<>();
+	
+	public void cadastrarProduto(Produto novoproduto) {
+		listaProdutos.add(novoproduto);
+	}
+	
+	public void listarProduto() {
+		System.out.println("Lista de produtos");
+		for (Produto produto : listaProdutos) {
+			System.out.println(produto.nomeProduto);
+		}
+		System.out.println('\n');
+	}
+}

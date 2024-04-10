@@ -1,0 +1,56 @@
+package controller;
+
+import java.util.Scanner;
+import model.Cliente;
+import model.Produto;
+import view.View;
+import controller.ProdutoController;
+
+public class Controller {
+	public static void main(String args[]) {
+
+		Scanner opcaoUsuario = new Scanner(System.in);
+		ProdutoController acoesProdutos = new ProdutoController();
+		View novatela = new View();
+		novatela.BoasVindas();
+		novatela.Menu();
+		String resposta = opcaoUsuario.nextLine();
+		
+		//Verificando opcao
+		if(resposta == "2") {
+			//Criando produtos
+			System.out.println("Informe o nome do produto");
+			Produto novoProduto = new Produto();
+			novoProduto.setNomeProduto(resposta);
+			System.out.println("Informe o valor do produto");
+			novoProduto.setValor(Double.parseDouble(resposta));
+			acoesProdutos.cadastrarProduto(novoProduto);
+			acoesProdutos.listarProduto();
+		}
+		if(resposta == "4") {
+			acoesProdutos.listarProduto();
+		}
+		
+		//Criando clientes
+		Cliente novoCliente = new Cliente();
+		novoCliente.setNome("Nayana");
+		
+		Cliente novoCliente2 = new Cliente();
+		novoCliente2.setNome("Vitoria");
+		
+		//Criando produtos
+		Produto novoProduto = new Produto();
+		novoProduto.setNomeProduto("Macarrão Adria");
+		novoProduto.setValor(5.60);
+		
+		Produto novoProduto2 = new Produto();
+		novoProduto2.setNomeProduto("Pão Francês");
+		novoProduto2.setValor(10.00);
+		
+		//Ações em cima do cliente
+		ClienteController acoesCliente = new ClienteController();
+		acoesCliente.cadastrarCliente(novoCliente);
+		acoesCliente.cadastrarCliente(novoCliente2);
+		acoesCliente.listarClientes();
+	}
+}

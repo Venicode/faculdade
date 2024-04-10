@@ -3,4 +3,5 @@
     <fullyQualifiedTypeName name="model.Cliente"/>
     <fullyQualifiedTypeName name="model.Produto"/>
     <fullyQualifiedTypeName name="javax.swing.JOptionPane"/>
+    <fullyQualifiedTypeName name="java.lang.System"/>
 </qualifiedTypeNameHistroy>

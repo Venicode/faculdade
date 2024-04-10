@@ -3,7 +3,7 @@ package model;
 public class Produto {
 	//ATRIBUTOS
 	private int codProduto;
-	private String nomeProduto;
+	public String nomeProduto;
 	private String descricaoProduto;
 	private int quantProduto;
 	private String dataFabricacao;
