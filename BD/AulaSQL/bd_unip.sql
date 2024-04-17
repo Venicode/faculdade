@@ -1,7 +1,9 @@
 -- Criacao do banco
 CREATE DATABASE BD_UNIP_2024;
+
 -- Colocar o banco em uso
 use BD_UNIP_2024;
+
 -- Criar tabela
 CREATE TABLE TESTE01(
 	ID INT IDENTITY NOT NULL PRIMARY KEY,
@@ -11,6 +13,7 @@ CREATE TABLE TESTE01(
 	PESO FLOAT NOT NULL,
 	HORACADASTRO TIME NOT NULL,
 );
+
 --Inserir dados na tabela
 INSERT INTO TESTE01 VALUES(
 'ROBERTO CARLOS',
@@ -28,8 +31,6 @@ INSERT INTO TESTE01 VALUES(
 '22:20'
 );
 
---Selecionar tabela
-SELECT*FROM TESTE01;
 --Dropar (excluir) tabela
 --DROP TABLE TESTE01
 
@@ -44,3 +45,60 @@ INSERT INTO TESTE01 VALUES(
 '23:30',
 'SilvioSantos@sbt.com'
 );
+
+--Atualizando dado da tabela
+UPDATE TESTE01 SET NOME= 'ROBERTO CARLOS DA SILVA'
+WHERE ID = 1;
+
+--Deletando dado da tabela
+DELETE FROM TESTE01
+WHERE ID = 3;
+
+ALTER TABLE TESTE01 ADD SALARIO MONEY;
+
+INSERT INTO TESTE01 VALUES(
+'FATIMA BERNADES',
+'F',
+'01-05-1985',
+60.00,
+'08:00',
+'fatimabernades.com.br',
+10000.00
+);
+
+INSERT INTO TESTE01 VALUES(
+'RODRIGO FARO',
+'M',
+'01-08-1972',
+70.00,
+'10:00',
+'rodrigofaro.com.br',
+11000.00
+);
+
+INSERT INTO TESTE01 VALUES(
+'ELON MUSK',
+'M',
+'01-05-1985',
+80.00,
+'05:30',
+'elonmusk@x.com.br',
+12000.00
+);
+
+--Selecionar tabela
+SELECT*FROM TESTE01;
+
+-- Comparacao de dados
+SELECT NOME,SEXO,EMAIL,SALARIO
+FROM TESTE01
+WHERE SALARIO <12000.00;
+
+SELECT NOME,SEXO,EMAIL,SALARIO
+FROM TESTE01
+WHERE SALARIO = 12000.00 OR SALARIO = 11000.00;
+
+-- Inserir nova coluna para capturar a data de hoje - 90 dias
+SELECT NOME,SEXO,EMAIL, DATANASC, SALARIO, GETDATE()-90
+AS RESULTADO
+FROM TESTE01
